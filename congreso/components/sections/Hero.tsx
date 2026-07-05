@@ -83,14 +83,6 @@ export default function Hero() {
 
           </h1>
 
-          <p className="mt-8 max-w-2xl text-lg leading-8 text-white/70">
-
-            Un espacio académico internacional para el análisis del Derecho
-            Procesal Penal y los desafíos que plantea la Inteligencia Artificial
-            en la administración de justicia.
-
-          </p>
-
           <div className="mt-12 flex flex-wrap items-center gap-8">
 
             <Button>
@@ -111,7 +103,7 @@ export default function Hero() {
 
             <div className="flex flex-wrap gap-4 text-sm uppercase tracking-[0.25em] text-white/60">
 
-              <span>Medellín</span>
+              <span>Guadalajara</span>
 
               <span>•</span>
 
