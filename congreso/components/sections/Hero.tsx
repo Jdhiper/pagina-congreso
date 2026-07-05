@@ -85,13 +85,15 @@ export default function Hero() {
 
           <div className="mt-12 flex flex-wrap items-center gap-8">
 
-            <Button>
+            <Button
+            href="https://forms.cloud.microsoft/r/00RS9Lhvjp?origin=QRCode&qrcodeorigin=presentation">
 
               Inscripciones
 
             </Button>
 
-            <button className="font-medium text-white transition hover:text-[#D9B471]">
+            <button className="font-medium text-white transition hover:text-[#D9B471]"
+            >
 
               Ver programación →
 

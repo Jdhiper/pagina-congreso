@@ -1,73 +1,81 @@
-import Button from "../ui/Button";
 import Container from "../ui/Container";
-
-const topics = [
-  "Inteligencia Artificial",
-  "Dogmática y Proceso Penal",
-  "Justicia Restaurativa y Víctimas",
-  "Régimen Probatorio",
-  "Allanamientos y Negociaciones",
-  "Derechos Fundamentales",
-  "Casación Penal",
-  "Perspectiva de Género",
-];
+import { topics } from "@/data/topics";
+import Button from "../ui/Button";
 
 export default function Topics() {
   return (
-    <section className="bg-white py-20">
+    <section className="bg-[#F8F8F7] py-16">
 
-  <Container>
+      <Container>
 
-    <div className="mx-auto max-w-3xl text-center">
+        <div className="mb-10 text-center">
 
-      <span className="text-sm uppercase tracking-[0.35em] text-[#AF8428]">
-        Programación Académica
-      </span>
+          <span className="text-sm uppercase tracking-[0.35em] text-primary">
+            Ejes temáticos
+          </span>
 
-      <h2 className="mt-4 font-playfair text-4xl text-[#1B2126]">
-        Ejes Temáticos
-      </h2>
+          <h2 className="mt-3 font-playfair text-3xl md:text-4xl text-dark">
+            Temas principales
+          </h2>
 
-    </div>
+        </div>
 
-    <div className="mx-auto mt-14 flex max-w-5xl flex-wrap justify-center gap-4">
+        <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
 
-      {topics.map((topic) => (
+          {topics.map((topic) => (
 
-        <button
-          key={topic}
-          className="
-            rounded-full
-            border
-            border-[#D9B471]
-            bg-white
-            px-7
-            py-4
-            text-[#1B2126]
-            transition-all
-            duration-300
-            hover:bg-[#AF8428]
-            hover:text-white
-            hover:border-[#AF8428]
-          "
-        >
-          {topic}
-        </button>
+            <div
+              key={topic.title}
+              className="
+                rounded-3xl
+                bg-white
+                border
+                border-[#D9B471]/20
+                p-5
+              "
+            >
 
-      ))}
+              <div className="text-3xl">
 
-    </div>
+                {topic.icon}
 
-    <div className="mt-12 text-center">
+              </div>
 
-      <Button href="/programacion">
-        Ver programación completa
-      </Button>
+              <h3 className="mt-4 font-semibold text-dark leading-snug">
 
-    </div>
+                {topic.title}
 
-  </Container>
+              </h3>
 
-</section>
+              <p className="mt-3 text-xs text-gray-500">
+
+                {topic.day}
+
+                <br />
+
+                {topic.session}
+
+              </p>
+
+            </div>
+
+          ))}
+
+        </div>
+
+          <div className = "text-center">
+            <Button
+                href="/programacion"
+                className="mt-10"
+            >
+                Ver programación
+            </Button>
+          </div>
+
+
+
+      </Container>
+
+    </section>
   );
 }

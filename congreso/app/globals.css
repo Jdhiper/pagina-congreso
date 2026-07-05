@@ -49,3 +49,35 @@ body{
 h1,h2,h3,h4,h5,h6{
   font-family:var(--font-title);
 }
+
+.partners-track {
+
+    display: flex;
+
+    width: max-content;
+
+    animation: partners 40s linear infinite;
+
+}
+
+.partners-track:hover {
+
+    animation-play-state: paused;
+
+}
+
+@keyframes partners {
+
+    from {
+
+        transform: translateX(0);
+
+    }
+
+    to {
+
+        transform: translateX(-50%);
+
+    }
+
+}
