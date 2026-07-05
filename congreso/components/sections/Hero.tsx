@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Button from "../ui/Button";
 import Container from "../ui/Container";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -92,12 +93,12 @@ export default function Hero() {
 
             </Button>
 
-            <button className="font-medium text-white transition hover:text-[#D9B471]"
+            <Link
+              href="/programacion"
+              className="font-medium text-white transition hover:text-[#D9B471]"
             >
-
               Ver programación →
-
-            </button>
+            </Link>
 
           </div>
 
