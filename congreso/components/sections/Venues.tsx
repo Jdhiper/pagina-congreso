@@ -15,7 +15,7 @@ export default function Venues() {
           </span>
 
           <h2 className="mt-3 font-playfair text-3xl text-dark">
-            Tres ciudades, un mismo Congreso
+            Tres ciudades
           </h2>
 
         </div>

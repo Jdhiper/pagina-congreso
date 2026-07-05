@@ -10,7 +10,7 @@ export const venues = [
     country: "🇨🇴",
   },
   {
-    city: "Jalisco",
+    city: "guadalajara",
     date: "17-19 Nov",
     country: "🇲🇽",
   },

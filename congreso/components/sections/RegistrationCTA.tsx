@@ -58,7 +58,7 @@ export default function RegistrationCTA() {
               className="mt-8"
             >
 
-              Inscribirme
+              Inscribete
 
             </Button>
 
