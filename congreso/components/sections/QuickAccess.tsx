@@ -26,7 +26,7 @@ const links = [
   },
   {
     title: "Inscripciones",
-    href: "/inscripciones",
+    href: "https://forms.cloud.microsoft/r/00RS9Lhvjp?origin=QRCode&qrcodeorigin=presentation",
     icon: ClipboardPen,
   },
   {
