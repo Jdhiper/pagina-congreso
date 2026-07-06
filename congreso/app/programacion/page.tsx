@@ -5,13 +5,14 @@ import { useMemo, useState } from "react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
+
 import PageHero from "@/components/pages/PageHero";
 
 import Container from "@/components/ui/Container";
 import SegmentedControl from "@/components/ui/SegmentedControl";
 import Timeline from "@/components/ui/Timeline";
 
-import { schedule } from "@/data/schedule";
+import { schedule, ScheduleBlock } from "@/data/schedule";
 
 export default function ProgramacionPage() {
   const [venue, setVenue] = useState("Pasto");
@@ -54,13 +55,13 @@ export default function ProgramacionPage() {
 
 const info = venueInfo[venue as keyof typeof venueInfo];
 
-  const blocks = useMemo(() => {
-    if (venue !== "Pasto") return [];
+const blocks: ScheduleBlock[] = useMemo(() => {
+  if (venue !== "Pasto") return [];
 
-    return day === "13 Ago"
-      ? schedule.pasto["13"]
-      : schedule.pasto["14"];
-  }, [venue, day]);
+  return day === "13 Ago"
+    ? schedule.pasto["13"] ?? []
+    : schedule.pasto["14"] ?? [];
+}, [venue, day]);
 
   return (
     <>

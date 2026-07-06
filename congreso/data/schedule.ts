@@ -5,13 +5,19 @@ export interface ScheduleEvent {
   speaker?: string;
   position?: string;
   country?: string;
-  type?: "talk" | "coffee" | "panel" | "opening" | "closing";
+  type?: string;
 }
 
 export interface ScheduleBlock {
   title: string;
   theme: string;
   events: ScheduleEvent[];
+}
+
+export interface ScheduleData {
+  pasto: Record<string, ScheduleBlock[]>;
+  envigado: Record<string, ScheduleBlock[]>;
+  jalisco: Record<string, ScheduleBlock[]>;
 }
 
 export const schedule = {
