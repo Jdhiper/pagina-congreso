@@ -1,6 +1,6 @@
 export interface ScheduleEvent {
   time: string;
-  title: string;
+  title?: string;
   subtitle?: string;
   speaker?: string;
   position?: string;
