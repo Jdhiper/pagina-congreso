@@ -35,8 +35,9 @@ export default function FeaturedSpeakers() {
 
         <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
 
-          {speakers.map((speaker) => (
-
+          {speakers
+            .filter((speaker) => speaker.featured)
+            .map((speaker) => (
             <div
               key={speaker.name}
               className="
