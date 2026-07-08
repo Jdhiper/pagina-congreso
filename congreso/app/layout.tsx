@@ -26,6 +26,12 @@ export const metadata: Metadata = {
     template: "%s | III Jornadas Iberoamericanas",
   },
 
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
+  },
+
   description:
     "Sitio oficial de las III Jornadas Iberoamericanas de Derecho Procesal Penal 2026 con énfasis en Inteligencia Artificial. Congreso internacional con conferencistas de Iberoamérica, modalidad presencial y virtual.",
 
