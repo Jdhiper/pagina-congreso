@@ -1,71 +1,12 @@
-"use client";
+import type { Metadata } from "next";
+import PonentesClient from "./PonentesClient";
 
-import { useMemo, useState } from "react";
+export const metadata: Metadata = {
+  title: "Ponentes Internacionales | III Jornadas Iberoamericanas 2026",
+  description:
+    "Conoce a los magistrados, jueces, docentes e investigadores nacionales e internacionales que participarán como conferencistas en las III Jornadas Iberoamericanas de Derecho Procesal Penal 2026 con énfasis en Inteligencia Artificial.",
+};
 
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
-
-import PageHero from "@/components/pages/PageHero";
-
-import RegistrationCTA from "@/components/sections/RegistrationCTA";
-
-import SpeakerGrid from "@/components/pages/speakers/SpeakerGrid";
-import SpeakerModal from "@/components/pages/speakers/SpeakerModal";
-
-import { speakers, Speaker } from "@/data/speakers";
-
-export default function PonentesPage() {
-  const [country, setCountry] = useState("Todos");
-  const [search, setSearch] = useState("");
-
-  const [selectedSpeaker, setSelectedSpeaker] =
-    useState<Speaker | null>(null);
-
-  const filteredSpeakers = useMemo(() => {
-    return speakers.filter((speaker) => {
-      const matchesCountry =
-        country === "Todos" ||
-        speaker.countryCode === country;
-
-      const matchesSearch = speaker.name
-        .toLowerCase()
-        .includes(search.toLowerCase());
-
-      return matchesCountry && matchesSearch;
-    });
-  }, [country, search]);
-
-  return (
-    <>
-      <Navbar />
-
-      <main className="bg-[#F8F8F7]">
-
-        <PageHero
-          title="Ponentes"
-          subtitle="Magistrados, jueces, docentes, investigadores y profesionales del Derecho provenientes de diferentes países participarán en las III Jornadas Iberoamericanas de Derecho Procesal Penal."
-        />
-
-        <SpeakerGrid
-          speakers={filteredSpeakers}
-          country={country}
-          setCountry={setCountry}
-          search={search}
-          setSearch={setSearch}
-          onSelectSpeaker={setSelectedSpeaker}
-        />
-
-        <SpeakerModal
-          speaker={selectedSpeaker}
-          open={selectedSpeaker !== null}
-          onClose={() => setSelectedSpeaker(null)}
-        />
-
-        <RegistrationCTA />
-
-      </main>
-
-      <Footer />
-    </>
-  );
+export default function Page() {
+  return <PonentesClient />;
 }
