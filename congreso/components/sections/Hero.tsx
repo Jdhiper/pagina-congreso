@@ -106,7 +106,7 @@ export default function Hero() {
 
             <div className="flex flex-wrap gap-4 text-sm uppercase tracking-[0.25em] text-white/60">
 
-              <span>Guadalajara</span>
+              <span>Jalisco</span>
 
               <span>•</span>
 
