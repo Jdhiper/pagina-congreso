@@ -89,7 +89,7 @@ export default function Hero() {
             <Button
             href="https://forms.cloud.microsoft/r/00RS9Lhvjp?origin=QRCode&qrcodeorigin=presentation">
 
-              Inscripciones
+              Inscripciones gratuitas
 
             </Button>
 
@@ -106,7 +106,7 @@ export default function Hero() {
 
             <div className="flex flex-wrap gap-4 text-sm uppercase tracking-[0.25em] text-white/60">
 
-              <span>Jalisco</span>
+              <span>Pasto</span>
 
               <span>•</span>
 
@@ -114,7 +114,7 @@ export default function Hero() {
 
               <span>•</span>
 
-              <span>Pasto</span>
+              <span>Jalisco</span>
 
             </div>
 

@@ -307,10 +307,10 @@ export default function Navbar() {
                   <div className="pt-4">
 
                     <Button
-                      href="/inscripciones"
+                      href="https://forms.cloud.microsoft/r/00RS9Lhvjp?origin=QRCode&qrcodeorigin=presentation"
                       className="w-full"
                     >
-                      Inscripciones
+                      Inscripciones gratuitas
                     </Button>
 
                   </div>
