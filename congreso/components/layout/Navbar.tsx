@@ -196,8 +196,8 @@ export default function Navbar() {
 
           <div className="hidden lg:block">
 
-            <Button href="/inscripciones">
-              Inscripciones
+            <Button href="/https://forms.cloud.microsoft/pages/responsepage.aspx?id=mLosYviA80GN9Y65mQFZi02eYrEJsR9Lv-m_JP3bU5NUOVpFNjRKTlVKSVVBUjk0QTk0Q1dUR0hLNS4u&origin=QRCode&qrcodeorigin=presentation&route=shorturl">
+              Inscripciones gratuitas
             </Button>
 
           </div>

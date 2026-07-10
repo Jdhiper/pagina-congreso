@@ -116,6 +116,7 @@ export const speakers: Speaker[] = [
     country: "🇨🇴 Colombia",
     countryCode: "Colombia",
     image: "/images/speakers/Ceron.webp",
+    /* encontrar imagen*/
     phase: ["Pasto"],
     linkedin: ""
   },
@@ -159,7 +160,7 @@ export const speakers: Speaker[] = [
       "Magistrada Sala Penal Tribunal Superior del Distrito Judicial de Pasto",
     country: "🇨🇴 Colombia",
     countryCode: "Colombia",
-    image: "/images/speakers/Arellano.jpg",
+    image: "/images/speakers/Arellano.webp",
     phase: ["Pasto"],
     linkedin: ""
   },
