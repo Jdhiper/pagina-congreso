@@ -44,7 +44,7 @@ export const speakers: Speaker[] = [
       "Profesor de Teoría del Derecho, Derecho Constitucional, Principialística y Hermenéutica Jurídica",
     country: "🇨🇴 Colombia",
     countryCode: "Colombia",
-    image: "/images/speakers/default.jpg",
+    image: "/images/speakers/Estrada.webp",
     phase: ["Pasto"],
     linkedin: ""
   },
@@ -55,7 +55,7 @@ export const speakers: Speaker[] = [
     position: "Abogado",
     country: "🇩🇪 Alemania",
     countryCode: "Alemania",
-    image: "/images/speakers/default.jpg",
+    image: "/images/speakers/Bott.webp",
     featured: true,
     phase: ["Pasto"],
     linkedin: ""
@@ -80,7 +80,7 @@ export const speakers: Speaker[] = [
       "Magistrado Sala Penal Tribunal Superior del Distrito Judicial de Pasto",
     country: "🇨🇴 Colombia",
     countryCode: "Colombia",
-    image: "/images/speakers/default.jpg",
+    image: "/images/speakers/Solarte.webp",
     phase: ["Pasto"],
     linkedin: ""
   },
@@ -91,7 +91,7 @@ export const speakers: Speaker[] = [
     position: "Docente Universidad de Nariño",
     country: "🇨🇴 Colombia",
     countryCode: "Colombia",
-    image: "/images/speakers/default.jpg",
+    image: "/images/speakers/Palacios.webp",
     phase: ["Pasto"],
     linkedin: ""
   },
@@ -103,7 +103,7 @@ export const speakers: Speaker[] = [
       "Juez Tercero Penal Municipal con Función de Control de Garantías de Itagüí",
     country: "🇨🇴 Colombia",
     countryCode: "Colombia",
-    image: "/images/speakers/default.jpg",
+    image: "/images/speakers/Martinez.webp",
     phase: ["Pasto"],
     linkedin: ""
   },
@@ -115,7 +115,7 @@ export const speakers: Speaker[] = [
       "Magistrado Sala Penal Tribunal Superior del Distrito Judicial de Pasto",
     country: "🇨🇴 Colombia",
     countryCode: "Colombia",
-    image: "/images/speakers/default.jpg",
+    image: "/images/speakers/Ceron.webp",
     phase: ["Pasto"],
     linkedin: ""
   },
@@ -126,7 +126,7 @@ export const speakers: Speaker[] = [
     position: "Doctor en Derecho · Docente Universidad CESMAG",
     country: "🇨🇴 Colombia",
     countryCode: "Colombia",
-    image: "/images/speakers/default.jpg",
+    image: "/images/speakers/Ramirez.webp",
     phase: ["Pasto"],
     linkedin: ""
   },
@@ -137,7 +137,7 @@ export const speakers: Speaker[] = [
     position: "Docente · PhD",
     country: "🇪🇨 Ecuador",
     countryCode: "Ecuador",
-    image: "/images/speakers/default.jpg",
+    image: "/images/speakers/Guerra.webp",
     phase: ["Pasto"],
     linkedin: ""
   },
@@ -159,7 +159,7 @@ export const speakers: Speaker[] = [
       "Magistrada Sala Penal Tribunal Superior del Distrito Judicial de Pasto",
     country: "🇨🇴 Colombia",
     countryCode: "Colombia",
-    image: "/images/speakers/default.jpg",
+    image: "/images/speakers/Arellano.jpg",
     phase: ["Pasto"],
     linkedin: ""
   },
@@ -171,7 +171,7 @@ export const speakers: Speaker[] = [
       "Magistrada Sala Penal Tribunal Superior del Distrito Judicial de Pasto",
     country: "🇨🇴 Colombia",
     countryCode: "Colombia",
-    image: "/images/speakers/default.jpg",
+    image: "/images/speakers/Ceballos.webp",
     phase: ["Pasto"],
     linkedin: ""
   },
@@ -182,7 +182,7 @@ export const speakers: Speaker[] = [
     position: "Docente Universidad Mariana",
     country: "🇨🇴 Colombia",
     countryCode: "Colombia",
-    image: "/images/speakers/default.jpg",
+    image: "/images/speakers/Paz.webp",
     phase: ["Pasto"],
     linkedin: ""
   },
@@ -193,7 +193,8 @@ export const speakers: Speaker[] = [
     position: "Docente Universidad Cooperativa de Colombia",
     country: "🇨🇴 Colombia",
     countryCode: "Colombia",
-    image: "/images/speakers/default.jpg",
+    image: "/images/speakers/Ibarra.webp", 
+    /* encontrar imagen*/
     phase: ["Pasto"],
     linkedin: ""
   },
@@ -204,7 +205,7 @@ export const speakers: Speaker[] = [
     position: "Docente Universidad de Nariño",
     country: "🇨🇴 Colombia",
     countryCode: "Colombia",
-    image: "/images/speakers/default.jpg",
+    image: "/images/speakers/Cardenas.webp",
     phase: ["Pasto"],
     linkedin: ""
   },
@@ -227,7 +228,7 @@ export const speakers: Speaker[] = [
     position: "Docente Universidad de los Andes",
     country: "🇨🇴 Colombia",
     countryCode: "Colombia",
-    image: "/images/speakers/default.jpg",
+    image: "/images/speakers/Lopez.webp",
     phase: ["Pasto"],
     linkedin: ""
   },
@@ -238,7 +239,7 @@ export const speakers: Speaker[] = [
     position: "Representante del Poder Judicial de México",
     country: "🇲🇽 México",
     countryCode: "México",
-    image: "/images/speakers/default.jpg",
+    image: "/images/speakers/default.webp",
     phase: ["Pasto"],
     linkedin: ""
   },
