@@ -1,7 +1,14 @@
 "use client";
 
-import { useState } from "react";
-import { Search } from "lucide-react";
+import { FormEvent, useState } from "react";
+import { motion } from "framer-motion";
+
+import Card from "@/components/ui/Card";
+
+import DocumentInput from "./DocumentInput";
+import EventSelector from "./EventSelector";
+import SubmitButton from "./SubmitButton";
+
 import { events } from "@/data/events";
 
 interface CertificateFormProps {
@@ -17,10 +24,13 @@ export function CertificateForm({
   onSearch,
 }: CertificateFormProps) {
   const [document, setDocument] = useState("");
-  const [eventId, setEventId] = useState(events[0].id);
+
+  const [eventId, setEventId] = useState(
+    events[0].id
+  );
 
   async function handleSubmit(
-    e: React.FormEvent<HTMLFormElement>
+    e: FormEvent<HTMLFormElement>
   ) {
     e.preventDefault();
 
@@ -33,115 +43,60 @@ export function CertificateForm({
   }
 
   return (
-    <div className="rounded-3xl border border-[#D9B471]/20 bg-white shadow-lg shadow-[#AF8428]/5">
-      <div className="border-b border-[#D9B471]/15 px-8 py-7">
-        <h2 className="font-playfair text-3xl font-semibold text-[#1B2126]">
-          Consulta de certificados
-        </h2>
+    <motion.form
+      onSubmit={handleSubmit}
+      initial={{
+        opacity: 0,
+        y: 20,
+      }}
+      animate={{
+        opacity: 1,
+        y: 0,
+      }}
+      transition={{
+        duration: 0.45,
+      }}
+      className="mx-auto w-full max-w-2xl"
+    >
+      <Card className="space-y-8">
 
-        <p className="mt-2 text-[#222931]/70">
-          Selecciona la sede del evento e ingresa el documento
-          utilizado durante la inscripción.
+        <div className="text-center">
+
+          <span className="inline-flex rounded-full bg-[#F7F3E8] px-4 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-[#AF8428]">
+            Certificados
+          </span>
+
+          <h2 className="mt-5 font-playfair text-3xl font-semibold text-[#1B2126]">
+            Consulta tu certificado
+          </h2>
+
+          <p className="mx-auto mt-3 max-w-lg text-[#222931]/70 leading-7">
+            Ingresa el documento con el que realizaste tu inscripción
+            y selecciona la sede correspondiente.
+          </p>
+
+        </div>
+
+        <DocumentInput
+          value={document}
+          onChange={setDocument}
+        />
+
+        <EventSelector
+          value={eventId}
+          onChange={setEventId}
+        />
+
+        <SubmitButton
+          loading={loading}
+        />
+
+        <p className="text-center text-sm leading-6 text-[#222931]/55">
+          Si tu asistencia fue registrada correctamente,
+          podrás descargar tu certificado oficial en formato PDF.
         </p>
-      </div>
 
-      <form
-        onSubmit={handleSubmit}
-        className="space-y-7 p-8"
-      >
-        <div>
-          <label className="mb-2 block text-sm font-semibold text-[#222931]">
-            Documento de identidad
-          </label>
-
-          <input
-            type="text"
-            value={document}
-            onChange={(e) =>
-              setDocument(e.target.value)
-            }
-            placeholder="Ej. 1081274507"
-            className="
-              w-full
-              rounded-xl
-              border
-              border-gray-200
-              bg-white
-              px-4
-              py-3.5
-              transition
-              outline-none
-              focus:border-[#AF8428]
-              focus:ring-4
-              focus:ring-[#D9B471]/20
-            "
-          />
-        </div>
-
-        <div>
-          <label className="mb-2 block text-sm font-semibold text-[#222931]">
-            Sede del evento
-          </label>
-
-          <select
-            value={eventId}
-            onChange={(e) =>
-              setEventId(e.target.value)
-            }
-            className="
-              w-full
-              rounded-xl
-              border
-              border-gray-200
-              bg-white
-              px-4
-              py-3.5
-              transition
-              outline-none
-              focus:border-[#AF8428]
-              focus:ring-4
-              focus:ring-[#D9B471]/20
-            "
-          >
-            {events.map((event) => (
-              <option
-                key={event.id}
-                value={event.id}
-              >
-                {event.name}
-              </option>
-            ))}
-          </select>
-        </div>
-
-        <button
-          type="submit"
-          disabled={loading}
-          className="
-            flex
-            w-full
-            items-center
-            justify-center
-            gap-3
-            rounded-xl
-            bg-[#AF8428]
-            px-6
-            py-3.5
-            font-medium
-            text-white
-            transition
-            hover:bg-[#9B7724]
-            disabled:cursor-not-allowed
-            disabled:opacity-70
-          "
-        >
-          <Search size={18} />
-
-          {loading
-            ? "Consultando..."
-            : "Consultar certificado"}
-        </button>
-      </form>
-    </div>
+      </Card>
+    </motion.form>
   );
 }

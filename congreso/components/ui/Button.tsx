@@ -1,8 +1,10 @@
 import Link from "next/link";
+import { ButtonHTMLAttributes, ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
-interface ButtonProps {
-  children: React.ReactNode;
+interface ButtonProps
+  extends ButtonHTMLAttributes<HTMLButtonElement> {
+  children: ReactNode;
   href?: string;
   variant?: "primary" | "secondary" | "outline";
   className?: string;
@@ -13,6 +15,8 @@ export default function Button({
   href,
   variant = "primary",
   className,
+  type = "button",
+  ...props
 }: ButtonProps) {
   const styles = {
     primary:
@@ -24,18 +28,29 @@ export default function Button({
   };
 
   const classes = cn(
-    "inline-flex items-center justify-center rounded-2xl px-6 py-3 font-medium font-sans",
+    "inline-flex items-center justify-center rounded-2xl px-6 py-3 font-medium font-sans disabled:cursor-not-allowed disabled:opacity-60",
     styles[variant],
     className
   );
 
   if (href) {
     return (
-      <Link href={href} className={classes}>
+      <Link
+        href={href}
+        className={classes}
+      >
         {children}
       </Link>
     );
   }
 
-  return <button className={classes}>{children}</button>;
+  return (
+    <button
+      type={type}
+      className={classes}
+      {...props}
+    >
+      {children}
+    </button>
+  );
 }
