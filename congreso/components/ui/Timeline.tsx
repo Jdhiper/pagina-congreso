@@ -11,26 +11,26 @@ export default function Timeline({ blocks }: TimelineProps) {
 
       {blocks.map((block, index) => (
 
-          <section
-            key={index}
-            className="pb-28 last:pb-0"
-          >
+        <section
+          key={index}
+          className="pb-16 md:pb-20 last:pb-0"
+        >
 
           {/* Cabecera */}
 
-          <span className="text-sm uppercase tracking-[0.35em] text-primary">
+          <span className="text-xs md:text-sm uppercase tracking-[0.3em] text-primary">
             {block.title}
           </span>
 
-          <h2 className="mt-4 font-playfair text-4xl leading-tight text-dark">
+          <h2 className="mt-2 font-playfair text-3xl md:text-4xl leading-tight text-dark">
             {block.theme}
           </h2>
 
-          <div className="mt-8 border-b border-[#D9B471]/30" />
+          <div className="mt-6 border-b border-[#D9B471]/30" />
 
           {/* Eventos */}
 
-          <div className="mt-4">
+          <div className="mt-2">
 
             {block.events.map((event, i) => (
 

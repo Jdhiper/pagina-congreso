@@ -17,8 +17,8 @@ export default function TimelineItem({
   return (
       <article
         className={`
-          py-10 md:py-12
-          ${!isLast ? "border-b border-[#D9B471]/20" : "pb-20"}
+          py-5 md:py-6
+          ${!isLast ? "border-b border-[#D9B471]/20" : ""}
         `}
       >
       <div className="flex flex-col md:flex-row md:gap-12">

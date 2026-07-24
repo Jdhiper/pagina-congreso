@@ -12,7 +12,7 @@ export const venues = [
 
     name: "Universidad CESMAG",
 
-    address: "San Juan de Pasto, Nariño, Colombia",
+    address: "Cra. 20a # 14-54, Pasto, Nariño",
 
     modality: "Presencial y virtual",
 
@@ -27,10 +27,16 @@ export const venues = [
 
     features: [
       "Auditorios principales",
-      "Parqueaderos",
+      "Parqueadero",
       "Accesibilidad",
       "Cafeterías",
     ],
+    topics: [
+      "Los jueces en los Estados Constitucionales de Derecho",
+      "Justicia Restaurativa",
+      "Enfoques diferenciales y perspectiva de género",
+      "Inteligencia Artificial y Derecho",
+      ],
   },
 
   {
@@ -64,6 +70,17 @@ export const venues = [
       "Parqueaderos",
       "Zona gastronómica",
     ],
+
+    topics: [
+      "Inteligencia Artificial",
+      "Dogmática y proceso penal",
+      "Justicia restaurativa y víctimas",
+      "Régimen probatorio en el proceso penal",
+      "Allanamientos, negociaciones y reparación integral",
+      "Derechos Fundamentales y Convencionalidad",
+      "Casación Penal",
+      "Perspectiva de género",
+    ],
   },
 
   {
@@ -96,6 +113,9 @@ export const venues = [
       "Auditorios",
       "Centro histórico",
       "Hoteles cercanos",
+    ],
+    topics: [
+      "Programación próximamente",
     ],
   },
 ];

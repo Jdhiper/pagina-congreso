@@ -115,7 +115,7 @@ export const speakers: Speaker[] = [
       "Magistrado Sala Penal Tribunal Superior del Distrito Judicial de Pasto",
     country: "🇨🇴 Colombia",
     countryCode: "Colombia",
-    image: "/images/speakers/Ceron.webp",
+    image: "/images/speakers/Efrain.webp",
     /* encontrar imagen*/
     phase: ["Pasto"],
     linkedin: ""
@@ -234,14 +234,4 @@ export const speakers: Speaker[] = [
     linkedin: ""
   },
 
-  {
-    id: "juez-mexicana",
-    name: "Ponente por confirmar",
-    position: "Representante del Poder Judicial de México",
-    country: "🇲🇽 México",
-    countryCode: "México",
-    image: "/images/speakers/default.webp",
-    phase: ["Pasto"],
-    linkedin: ""
-  },
 ];

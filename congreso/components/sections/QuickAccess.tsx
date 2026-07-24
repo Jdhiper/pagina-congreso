@@ -6,9 +6,15 @@ import {
   MapPin,
   ClipboardPen,
   GraduationCap,
+  Landmark,
 } from "lucide-react";
 
 const links = [
+  {
+    title: "Congreso",
+    href: "/congreso",
+    icon: Landmark,
+  },
   {
     title: "Programación",
     href: "/programacion",
@@ -38,40 +44,58 @@ const links = [
 
 export default function QuickAccess() {
   return (
-    <section className="bg-background py-12">
+    <section className="bg-background pt-10 pb-4">
 
       <Container>
 
-        {/* Encabezado */}
+        <div className="mb-10 text-center">
 
-        <div className="mb-8 text-center">
-
-          <span className="text-sm uppercase tracking-[0.35em] text-primary">
+          <span className="text-sm uppercase tracking-[0.35em] text-[#AF8428]">
             Explore el Congreso
           </span>
 
-          <h2 className="mt-3 font-playfair text-3xl text-dark">
+          <h2 className="mt-3 font-playfair text-4xl text-[#1B2126]">
             Accesos rápidos
           </h2>
 
-          <div className="mx-auto mt-4 h-px w-20 bg-[#D9B471]" />
+          <p className="mt-4 text-gray-500">
+            Toda la información importante a un solo clic.
+          </p>
 
         </div>
 
-        {/* Barra de accesos */}
-
         <div
           className="
-            rounded-[32px]
+            relative
+            overflow-hidden
+            rounded-[30px]
             border
-            border-[#D9B471]/20
-            bg-white/70
-            p-3
-            backdrop-blur-xl
-          "
+            border-white/60
+            bg-white/55
+            p-2
+            backdrop-blur-2xl
+            shadow-xl
+            shadow-black/5
+            "
         >
 
-          <div className="grid grid-cols-2 gap-2 md:grid-cols-5">
+          {/* brillo superior */}
+
+          <div
+            className="
+              pointer-events-none
+
+              absolute
+              inset-0
+
+              bg-gradient-to-br
+              from-white/40
+              via-transparent
+              to-[#D9B471]/10
+            "
+          />
+
+          <div className="grid grid-cols-3 gap-2 md:grid-cols-6">
 
             {links.map((item) => {
 
@@ -82,68 +106,126 @@ export default function QuickAccess() {
                 <Link
                   key={item.title}
                   href={item.href}
-                  className={`
-                    group
-                    flex
-                    flex-col
-                    items-center
-                    justify-center
-                    rounded-2xl
-                    p-4
-                    transition-all
-                    duration-300
-                    hover:bg-[#F7F5F0]
+                  className="
+                  group
+                  relative
 
-                    ${
-                      item.title === "Certificados"
-                        ? "col-span-2 md:col-span-1"
-                        : ""
-                    }
-                  `}
+                  flex
+                  flex-col
+                  items-center
+                  justify-center
+
+                  overflow-hidden
+
+                  rounded-2xl
+
+                  border
+                  border-transparent
+
+                  bg-white/35
+
+                  px-3
+                  py-4
+
+                  backdrop-blur-xl
+
+                  transition-all
+                  duration-300
+
+                  hover:-translate-y-1
+                  hover:border-[#D9B471]/60
+                  hover:bg-white/70
+                  hover:shadow-lg
+                  hover:shadow-[#AF8428]/15
+                "
                 >
+
+                  {/* Glow */}
+
+                   <div
+                    className="
+                      absolute
+
+                      -right-8
+                      -top-8
+
+                      h-24
+                      w-24
+
+                      rounded-full
+
+                      bg-[#AF8428]/10
+
+                      opacity-0
+
+                      blur-3xl
+
+                      transition-all
+                      duration-300
+
+                      group-hover:opacity-100
+                    "
+                    />
+
 
                   <div
                     className="
+                      relative
+
                       flex
-                      h-12
-                      w-12
+                      h-11
+                      w-11
+                      md:h-12
+                      md:w-12
+
                       items-center
                       justify-center
-                      rounded-full
-                      border
-                      border-[#D9B471]/40
+
+                      rounded-2xl
+
                       bg-white
+
                       transition-all
                       duration-300
-                      group-hover:border-[#AF8428]
-                      group-hover:bg-[#AF8428]
-                      group-hover:scale-105
+
+                      group-hover:bg-[#AF8428]/10
                     "
                   >
 
                     <Icon
                       size={20}
                       className="
-                        text-primary
-                        transition-colors
+                        text-[#AF8428]
+
+                        transition-all
                         duration-300
-                        group-hover:text-white
-                      "
+
+                        group-hover:scale-110
+                        group-hover:rotate-6
+                    "
                     />
 
                   </div>
 
                   <span
                     className="
-                      mt-3
+                      mt-2
+
+                      text-[11px]
+                      md:text-xs
+
+                      font-semibold
+
+                      leading-tight
+
                       text-center
-                      text-xs
-                      font-medium
-                      leading-4
-                      text-dark
+
+                      text-[#222931]
+
                       transition-colors
                       duration-300
-                      group-hover:text-primary
+
+                      group-hover:text-[#AF8428]
                     "
                   >
                     {item.title}

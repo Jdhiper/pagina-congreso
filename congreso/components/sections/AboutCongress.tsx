@@ -3,7 +3,7 @@ import Button from "../ui/Button";
 
 export default function AboutCongress() {
   return (
-    <section className="relative bg-[#F2F2F1] py-24">
+    <section className="relative bg-[#F2F2F1] pt-10 pb-20">
 
       <Container>
 
@@ -47,7 +47,6 @@ export default function AboutCongress() {
             <div className="space-y-10">
 
             {[
-                ["8", "Ejes temáticos"],
                 ["3", "Sedes presenciales"],
                 ["+10.000", "Asistentes en ediciones anteriores"],
                 ["2026", "Nueva edición"],

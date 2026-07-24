@@ -17,6 +17,7 @@ interface Venue {
   description: string;
   digitalRoute: string;
   features: string[];
+  topics: string[];
 }
 
 interface VenueInfoProps {
@@ -61,6 +62,40 @@ export default function VenueInfo({ venue }: VenueInfoProps) {
             <p className="mt-6 text-lg leading-8 text-gray-600">
               {venue.description}
             </p>
+
+            {/* Temas principales */}
+
+          <div className="mt-10">
+
+            <h3 className="font-playfair text-2xl text-[#1B2126]">
+              Temas principales
+            </h3>
+
+            <div className="mt-6 flex flex-wrap gap-3">
+
+              {venue.topics.map((topic) => (
+
+                <span
+                  key={topic}
+                  className="
+                    rounded-full
+                    bg-[#222931]
+                    px-4
+                    py-2
+                    text-sm
+                    text-white
+                    border
+                    border-[#AF8428]/30
+                  "
+                >
+                  {topic}
+                </span>
+
+              ))}
+
+            </div>
+
+          </div>
 
             {/* Datos */}
 

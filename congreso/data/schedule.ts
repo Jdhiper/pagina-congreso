@@ -258,7 +258,108 @@ export const schedule = {
     ],
   },
 
-  envigado: {},
+envigado: {
+  septiembre: [
+    {
+      title: "22 de septiembre",
+      theme: "Inteligencia Artificial y Derecho",
+      events: [
+        {
+          time: "",
+          title: "",
+          subtitle:
+            "",
+          type: "info",
+        },
+      ],
+    },
 
+    {
+      title: "23 de septiembre",
+      theme: "Dogmática y Proceso Penal",
+      events: [
+        {
+          time: "",
+          title: "",
+          subtitle:
+            "",
+          type: "info",
+        },
+      ],
+    },
+
+    {
+      title: "24 de septiembre",
+      theme: "Justicia Restaurativa y Víctimas",
+      events: [
+        {
+          time: "",
+          title: "",
+          subtitle:
+            "",
+          type: "info",
+        },
+      ],
+    },
+  ],
+
+  octubre: [
+    {
+      title: "20 de octubre",
+      theme: "Régimen Probatorio en el Sistema Penal",
+      events: [
+        {
+          time: "",
+          title: "",
+          subtitle:
+            "",
+          type: "info",
+        },
+      ],
+    },
+
+    {
+      title: "21 de octubre",
+      theme: "Allanamientos, Negociaciones y Reparación Integral",
+      events: [
+        {
+          time: "",
+          title: "",
+          subtitle:
+            "",
+          type: "info",
+        },
+      ],
+    },
+
+    {
+      title: "22 de octubre",
+      theme: "Derechos Fundamentales, Convencionalidad y Proceso Penal",
+      events: [
+        {
+          time: "",
+          title: "",
+          subtitle:
+            "",
+          type: "info",
+        },
+      ],
+    },
+
+    {
+      title: "23 de octubre",
+      theme: "Casación Penal",
+      events: [
+        {
+          time: "",
+          title: "",
+          subtitle:
+            "",
+          type: "info",
+        },
+      ],
+    },
+  ],
+},
   jalisco: {},
 };
