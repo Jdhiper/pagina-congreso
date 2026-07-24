@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import SedesClient from "./SedesClient";
+import { Suspense } from "react";
 
 export const metadata: Metadata = {
   title: "Sedes | III Jornadas Iberoamericanas 2026",
@@ -8,5 +9,9 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <SedesClient />;
+  return (
+  <Suspense fallback={null}>
+  <SedesClient />;
+  </Suspense>
+  );
 }
