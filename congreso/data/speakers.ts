@@ -194,7 +194,7 @@ export const speakers: Speaker[] = [
     position: "Docente Universidad Cooperativa de Colombia",
     country: "🇨🇴 Colombia",
     countryCode: "Colombia",
-    image: "/images/speakers/Ibarra.webp", 
+    image: "/images/speakers/default.png", 
     /* encontrar imagen*/
     phase: ["Pasto"],
     linkedin: ""

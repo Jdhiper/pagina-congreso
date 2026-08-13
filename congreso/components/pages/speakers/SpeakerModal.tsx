@@ -35,6 +35,7 @@ export default function SpeakerModal({
                 src={speaker.image}
                 alt={speaker.name}
                 fill
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover"
               />
 
