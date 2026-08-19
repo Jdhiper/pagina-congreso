@@ -15,7 +15,7 @@ import Logo from "./logo";
 
 const links = [
   { name: "Inicio", href: "/" },
-  { name: "Congreso", href: "/congreso" },
+  { name: "jornadas", href: "/jornadas" },
   { name: "Programación", href: "/programacion" },
   { name: "Ponentes", href: "/ponentes" },
   { name: "Sedes", href: "/sedes" },
@@ -24,7 +24,7 @@ const links = [
 
 const pageTitles: Record<string, string> = {
   "/": "INICIO",
-  "/congreso": "CONGRESO",
+  "/jornadas": "JORNADAS",
   "/programacion": "PROGRAMACIÓN",
   "/ponentes": "PONENTES",
   "/sedes": "SEDES",

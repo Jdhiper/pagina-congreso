@@ -11,8 +11,8 @@ import {
 
 const links = [
   {
-    title: "Congreso",
-    href: "/congreso",
+    title: "Jornadas",
+    href: "/jornadas",
     icon: Landmark,
   },
   {
@@ -51,7 +51,7 @@ export default function QuickAccess() {
         <div className="mb-10 text-center">
 
           <span className="text-sm uppercase tracking-[0.35em] text-[#AF8428]">
-            Explore el Congreso
+            Explore Nuestras jornadas
           </span>
 
           <h2 className="mt-3 font-playfair text-4xl text-[#1B2126]">

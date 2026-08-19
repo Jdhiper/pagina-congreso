@@ -14,7 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
-      url: `${BASE_URL}/congreso`,
+      url: `${BASE_URL}/jornadas`,
       lastModified: now,
       changeFrequency: "weekly",
       priority: 0.95,

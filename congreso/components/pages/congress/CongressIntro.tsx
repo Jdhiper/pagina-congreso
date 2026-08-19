@@ -33,7 +33,7 @@ export default function CongressIntro() {
 
             <p className="mt-6 text-lg leading-8 text-gray-600">
 
-              Durante el congreso se desarrollarán conferencias, paneles y
+              Durante las jornadas se desarrollarán conferencias, paneles y
               espacios de diálogo académico con expertos provenientes de
               Alemania, Argentina, Brasil, Chile, Colombia, Ecuador,
               España, Estados Unidos, México y Perú.

@@ -18,7 +18,7 @@ export default function FlyersCarousel() {
           </span>
 
           <h2 className="mt-3 font-playfair text-3xl text-dark">
-            Flyers del Congreso
+            Flyers de las jornadas
           </h2>
 
         </div>

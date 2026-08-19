@@ -14,7 +14,7 @@ export default function AboutCongress() {
           <div>
 
             <span className="text-sm uppercase tracking-[0.35em] text-[#AF8428]">
-              Sobre el Congreso
+              Sobre las jornadas
             </span>
 
             <h2 className="mt-5 font-playfair text-4xl leading-tight text-[#1B2126] md:text-5xl">
@@ -37,7 +37,7 @@ export default function AboutCongress() {
               href="/congreso"
               className="mt-10"
             >
-              Conocer el Congreso
+              Conocer las jornadas
             </Button>
 
           </div>

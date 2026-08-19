@@ -28,7 +28,7 @@ export default function CongressTopics() {
           </span>
 
           <h2 className="mt-5 font-playfair text-4xl text-[#1B2126] md:text-5xl">
-            Ejes temáticos del Congreso
+            Ejes temáticos de las jornadas
           </h2>
 
           <p className="mt-6 text-lg leading-8 text-gray-600">

@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   },
 
   description:
-    "Sitio oficial de las III Jornadas Iberoamericanas de Derecho Procesal Penal 2026 con énfasis en Inteligencia Artificial. Congreso internacional con conferencistas de Iberoamérica, modalidad presencial y virtual.",
+    "Sitio oficial de las III Jornadas Iberoamericanas de Derecho Procesal Penal 2026 con énfasis en Inteligencia Artificial. Jornadas internacionales con conferencistas de Iberoamérica, modalidad presencial y virtual.",
 
   keywords: [
     "Derecho Procesal Penal",
@@ -92,7 +92,7 @@ export const metadata: Metadata = {
       "III Jornadas Iberoamericanas de Derecho Procesal Penal 2026",
 
     description:
-      "Congreso internacional de Derecho Procesal Penal con énfasis en Inteligencia Artificial. Más de 90 conferencistas nacionales e internacionales.",
+      "Jornadas internacionales de Derecho Procesal Penal con énfasis en Inteligencia Artificial. Más de 90 conferencistas nacionales e internacionales.",
 
     url: "https://www.jornadasiberoamericanasdederechoprocesalpenal.com",
 

@@ -115,7 +115,7 @@ export const speakers: Speaker[] = [
       "Magistrado Sala Penal Tribunal Superior del Distrito Judicial de Pasto",
     country: "🇨🇴 Colombia",
     countryCode: "Colombia",
-    image: "/images/speakers/Efrain.webp",
+    image: "/images/speakers/efrain.jpeg",
     /* encontrar imagen*/
     phase: ["Pasto"],
     linkedin: ""

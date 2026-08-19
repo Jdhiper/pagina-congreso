@@ -24,8 +24,8 @@ export const navigation = [
     href: "/",
   },
   {
-    name: "Congreso",
-    href: "/congreso",
+    name: "Jornadas",
+    href: "/jornadas",
   },
   {
     name: "Programación",

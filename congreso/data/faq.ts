@@ -12,7 +12,7 @@ export const faqs = [
   {
     question: "¿Puedo asistir de manera virtual?",
     answer:
-      "Sí. El Congreso contará con modalidades presencial y virtual.",
+      "Sí. Las jornadas contarán con modalidades presencial y virtual.",
   },
   {
     question: "¿Dónde consulto la programación?",

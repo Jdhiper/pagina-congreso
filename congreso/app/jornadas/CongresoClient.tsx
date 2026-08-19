@@ -17,7 +17,7 @@ export default function CongresoClient() {
       <main className="bg-[#F8F8F7]">
 
         <PageHero
-          title="El Congreso"
+          title="Las III Jornadas"
           subtitle="Conoce la historia, los objetivos y el alcance de las III Jornadas Iberoamericanas de Derecho Procesal Penal con énfasis en Inteligencia Artificial."
         />
 
@@ -69,7 +69,7 @@ export default function CongresoClient() {
               </h2>
 
               <p className="mt-6 text-lg leading-8 text-gray-600">
-                El Congreso es organizado por tribunales superiores de Colombia y México,
+                Las Jornadas son organizadas por tribunales superiores de Colombia y México,
                 junto con universidades e instituciones comprometidas con el fortalecimiento
                 de la justicia y la formación jurídica.
               </p>

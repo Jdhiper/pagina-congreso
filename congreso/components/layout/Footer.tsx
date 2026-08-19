@@ -10,7 +10,7 @@ import {
 
 const links = [
   ["Inicio", "/"],
-  ["Congreso", "/congreso"],
+  ["Jornadas", "/jornadas"],
   ["Programación", "/programacion"],
   ["Ponentes", "/ponentes"],
   ["Sedes", "/sedes"],
@@ -108,7 +108,7 @@ export default function Footer() {
 
             <p className="text-gray-300">
 
-              congresoderechopro@gmail.com
+              jornadasiberoamed@cendoj.ramajudicial.gov.co
 
             </p>
 

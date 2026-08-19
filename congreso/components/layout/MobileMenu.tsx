@@ -9,7 +9,7 @@ interface Props {
 
 const links = [
   { name: "Inicio", href: "/" },
-  { name: "Congreso", href: "/congreso" },
+  { name: "Jornadas", href: "/jornadas" },
   { name: "Programación", href: "/programacion" },
   { name: "Ponentes", href: "/ponentes" },
   { name: "Sedes", href: "/sedes" },
