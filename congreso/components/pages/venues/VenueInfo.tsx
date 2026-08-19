@@ -176,28 +176,20 @@ export default function VenueInfo({ venue }: VenueInfoProps) {
                 Ver programación
               </Button>
 
-              <button
-                disabled
+              <Button
+                href={venue.digitalRoute}
+                variant="secondary"
                 className="
-                  rounded-full
                   border
                   border-[#AF8428]/30
                   px-8
                   py-4
                   text-sm
                   font-semibold
-                  text-[#AF8428]
-                  transition
-                  opacity-60
-                  cursor-not-allowed
                 "
               >
-                Enlace virtual 
-                <span className="ml-2 text-xs">
-                  (Próximamente)
-                </span>
-              </button>
-
+                Ver enlace virtual
+              </Button>
             </div>
 
           </div>

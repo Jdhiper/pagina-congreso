@@ -23,7 +23,7 @@ export const venues = [
     description:
       "La Universidad CESMAG será la sede principal de la primera fase de las III Jornadas Iberoamericanas de Derecho Procesal Penal.",
 
-    digitalRoute: "#",
+    digitalRoute: "https://youtube.com/playlist?list=PLAD0yTGw4s2o&si=M3caLs4CQDUkq4Py",
 
     features: [
       "Auditorios principales",
