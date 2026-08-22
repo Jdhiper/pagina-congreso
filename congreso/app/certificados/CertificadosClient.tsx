@@ -7,6 +7,7 @@ import Container from "@/components/ui/Container";
 
 import { CertificateForm } from "@/components/pages/certificates/CertificateForm";
 import CertificateModal from "@/components/pages/certificates/CertificateModal";
+import CertificateAccessGate from "@/components/pages/certificates/CertificateAccessGate";
 
 import {
   Search,
@@ -81,8 +82,6 @@ export default function CertificadosClient() {
 
       
 
-setOpen(true);
-
       setOpen(true);
     } finally {
       setLoading(false);
@@ -143,10 +142,12 @@ setOpen(true);
         <Container>
 
           <div className="mx-auto max-w-3xl">
-            <CertificateForm
-              loading={loading}
-              onSearch={handleSearch}
-            />
+            <CertificateAccessGate>
+              <CertificateForm
+                loading={loading}
+                onSearch={handleSearch}
+              />
+            </CertificateAccessGate>
           </div>
 
         </Container>

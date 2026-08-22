@@ -5,9 +5,18 @@ export async function POST(request: NextRequest) {
   try {
     const { document, eventId } = await request.json();
 
+    if (typeof document !== "string" || typeof eventId !== "string") {
+      return NextResponse.json(
+        { message: "Documento y evento son obligatorios." },
+        { status: 400 }
+      );
+    }
+
     const result = await certificateService.generate(
-      document,
-      eventId
+      document.trim(),
+      eventId.trim(),
+      // Toda generación iniciada desde el formulario público es virtual.
+      { certificateType: "virtual" }
     );
 
     return NextResponse.json(result);
@@ -20,7 +29,7 @@ export async function POST(request: NextRequest) {
     // Mensaje amigable para el usuario
     return NextResponse.json(
       {
-        error:
+        message:
           "No fue posible generar el certificado. Inténtalo nuevamente en unos minutos.",
       },
       {

@@ -16,6 +16,8 @@ export const siteConfig = {
   organization: "Tribunal Superior de Medellín",
 
   primaryColor: "#AF8428",
+
+  youtubeChannelUrl: "https://www.youtube.com/@jornadasiberoamericanas",
 };
 
 export const navigation = [

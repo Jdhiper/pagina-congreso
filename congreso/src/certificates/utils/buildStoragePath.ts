@@ -1,8 +1,11 @@
+import type { CertificateType } from "../types/certificate";
+
 export function buildStoragePath(
   eventId: string,
-  document: string
+  document: string,
+  type: CertificateType
 ): string {
   const cleanDocument = document.replace(/\D/g, "");
 
-  return `${eventId}/${cleanDocument}.pdf`;
+  return `${eventId}/${type}/${cleanDocument}.pdf`;
 }

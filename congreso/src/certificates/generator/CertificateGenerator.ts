@@ -14,7 +14,7 @@ export class CertificateGenerator {
   ): Promise<Buffer> {
 
     // Cargar la plantilla
-    const template = await loadTemplate();
+    const template = await loadTemplate(data.type);
 
     const pdfDoc = await PDFDocument.load(template);
 
