@@ -42,6 +42,24 @@ export class CertificateRepository {
     return data;
   }
 
+  async update(
+    id: string,
+    certificate: Database["public"]["Tables"]["certificates"]["Update"]
+  ): Promise<Certificate> {
+    const { data, error } = await adminClient
+      .from("certificates")
+      .update(certificate)
+      .eq("id", id)
+      .select()
+      .single();
+
+    if (error) {
+      throw error;
+    }
+
+    return data;
+  }
+
   async incrementDownloads(
     id: string,
     currentDownloads: number

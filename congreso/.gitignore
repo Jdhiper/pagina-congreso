@@ -19,6 +19,13 @@
 
 # production
 /build
+/output
+/private
+/tmp
+*.csv
+*.xlsx
+*.xls
+/scripts/regenerate-uppercase-certificates.ts
 
 # misc
 .DS_Store

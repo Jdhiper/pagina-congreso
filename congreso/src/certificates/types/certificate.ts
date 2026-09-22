@@ -4,7 +4,6 @@ export type CertificateType = (typeof certificateTypes)[number];
 
 export interface CertificateData {
   fullName: string;
-  document: string;
   type: CertificateType;
 }
 

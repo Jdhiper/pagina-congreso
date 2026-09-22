@@ -2,6 +2,7 @@
 
 import { IdCard } from "lucide-react";
 import Input from "@/components/ui/Input";
+import { normalizeDocument } from "@/src/certificates/utils/normalizeDocument";
 
 interface DocumentInputProps {
   value: string;
@@ -21,11 +22,9 @@ export default function DocumentInput({
       icon={<IdCard size={18} />}
       helperText="Ingresa el mismo documento utilizado durante la inscripción."
       autoComplete="off"
-      inputMode="numeric"
+      inputMode="text"
       onChange={(e) =>
-        onChange(
-          e.target.value.replace(/\D/g, "")
-        )
+        onChange(normalizeDocument(e.target.value))
       }
     />
   );

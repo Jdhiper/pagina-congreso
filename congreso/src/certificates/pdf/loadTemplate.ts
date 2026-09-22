@@ -25,15 +25,8 @@ export async function loadTemplate(type: CertificateType) {
       throw error;
     }
 
-    // Mantiene el sistema operativo mientras se reemplazan las dos plantillas.
-    return readFile(
-      path.join(
-        process.cwd(),
-        "src",
-        "certificates",
-        "templates",
-        "default.pdf"
-      )
+    throw new Error(
+      `Falta la plantilla ${templateFiles[type]} en src/certificates/templates.`
     );
   }
 }

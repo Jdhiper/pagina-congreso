@@ -6,7 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "certificates:batch": "tsx scripts/generate-certificates.ts",
+    "certificates:virtual-batch": "tsx scripts/generate-virtual-certificates.ts",
+    "certificates:test-users": "tsx scripts/create-certificate-test-users.ts",
+    "certificates:virtual": "tsx scripts/prepare-virtual-attendances.ts"
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
@@ -35,6 +39,7 @@
     "eslint": "^9",
     "eslint-config-next": "16.2.10",
     "tailwindcss": "^4",
+    "tsx": "^4.23.13",
     "typescript": "^5"
   }
 }

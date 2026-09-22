@@ -1,12 +1,13 @@
 import { NextRequest, NextResponse } from "next/server";
 
 import { validateCertificate } from "@/src/certificates/services/validation.service";
+import { normalizeDocument } from "@/src/certificates/utils/normalizeDocument";
 
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
 
-    const document = body.document?.trim();
+    const document = normalizeDocument(body.document?.trim() ?? "");
     const eventId = body.eventId?.trim();
 
     if (!document || !eventId) {

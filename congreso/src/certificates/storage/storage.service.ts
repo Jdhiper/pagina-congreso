@@ -23,13 +23,13 @@ export class StorageService {
     return path;
   }
 
-  getPublicUrl(path: string): string {
-
-    const { data } = adminClient.storage
+  async createSignedUrl(path: string, expiresInSeconds = 300): Promise<string> {
+    const { data, error } = await adminClient.storage
       .from(this.bucket)
-      .getPublicUrl(path);
+      .createSignedUrl(path, expiresInSeconds);
 
-    return data.publicUrl;
+    if (error) throw error;
+    return data.signedUrl;
   }
 
 }

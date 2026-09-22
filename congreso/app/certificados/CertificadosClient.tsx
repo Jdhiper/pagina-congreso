@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 
 import PageHeroCompact from "@/components/pages/PageHeroCompact";
 import Container from "@/components/ui/Container";
@@ -36,20 +37,11 @@ export default function CertificadosClient() {
   const [downloadUrl, setDownloadUrl] =
     useState("");
 
-  const [documentValue, setDocumentValue] =
-    useState("");
-
-  const [eventIdValue, setEventIdValue] =
-  useState("");
-
   async function handleSearch(
     document: string,
     eventId: string
   ) {
     setLoading(true);
-    setDocumentValue(document);
-    setEventIdValue(eventId);
-
     try {
       const response = await fetch("/api/certificates", {
         method: "POST",
@@ -67,10 +59,6 @@ export default function CertificadosClient() {
       if (data.status === "ready") {
         setDownloadUrl(data.url);
         setStatus("ready");
-      }
-
-      else if (data.status === "generate") {
-        setStatus("generate");
       }
 
       else {
@@ -94,43 +82,6 @@ export default function CertificadosClient() {
         window.open(downloadUrl, "_blank");
       }
 
-      async function handleGenerate() {
-      try {
-        setStatus("generating");
-
-        const response = await fetch("/api/certificates/generate", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            document: documentValue,
-            eventId: eventIdValue,
-          }),
-        });
-
-        const data = await response.json();
-
-        if (!response.ok) {
-          throw new Error(
-            data.message ?? "No fue posible generar el certificado."
-          );
-        }
-
-        setDownloadUrl(data.url);
-        setStatus("ready");
-
-      } catch (error) {
-
-        setMessage(
-          error instanceof Error
-            ? error.message
-            : "Ocurrió un error inesperado."
-        );
-
-        setStatus("error");
-      }
-    }
   return (
     <>
       <PageHeroCompact
@@ -148,6 +99,17 @@ export default function CertificadosClient() {
                 onSearch={handleSearch}
               />
             </CertificateAccessGate>
+
+            <p className="mt-6 text-center text-sm leading-6 text-[#222931]/70">
+              ¿Tu certificado tiene errores en el nombre, las tildes o las
+              mayúsculas?{" "}
+              <Link
+                href="/certificados/corregir"
+                className="font-semibold text-[#AF8428] underline-offset-4 hover:underline"
+              >
+                Corrígelo aquí
+              </Link>
+            </p>
           </div>
 
         </Container>
@@ -166,8 +128,8 @@ export default function CertificadosClient() {
           },
           {
             icon: <FileCheck size={28} />,
-            title: "Generación",
-            text: "Si el certificado aún no existe, el sistema lo generará automáticamente en unos segundos.",
+            title: "Validación",
+            text: "El sistema verifica que tu participación esté aprobada y que el certificado esté disponible.",
           },
           {
             icon: <Download size={28} />,
@@ -326,7 +288,7 @@ export default function CertificadosClient() {
 
     <p className="mt-5 max-w-3xl leading-8 text-white/80">
       Si asististe al evento y el sistema no encontró tu registro o
-      presentó algún inconveniente al generar el certificado, nuestro
+      presentó algún inconveniente al consultar el certificado, nuestro
       equipo revisará tu caso y realizará la validación correspondiente.
     </p>
 
@@ -400,7 +362,6 @@ export default function CertificadosClient() {
       status={status}
       message={message}
       onClose={() => setOpen(false)}
-      onGenerate={handleGenerate}
       onDownload={handleDownload}
     />
     </>

@@ -24,6 +24,7 @@ export type Database = {
           full_name: string
           id: string
           source: string
+          attendances_type: string | null
         }
         Insert: {
           attended_at?: string
@@ -34,6 +35,7 @@ export type Database = {
           full_name: string
           id?: string
           source?: string
+          attendances_type?: string | null
         }
         Update: {
           attended_at?: string
@@ -44,6 +46,7 @@ export type Database = {
           full_name?: string
           id?: string
           source?: string
+          attendances_type?: string | null
         }
         Relationships: [
           {
@@ -66,6 +69,7 @@ export type Database = {
           generated_at: string | null
           id: string
           storage_path: string | null
+          certificate_type: string | null
         }
         Insert: {
           created_at?: string
@@ -77,6 +81,7 @@ export type Database = {
           generated_at?: string | null
           id?: string
           storage_path?: string | null
+          certificate_type?: string | null
         }
         Update: {
           created_at?: string
@@ -88,6 +93,7 @@ export type Database = {
           generated_at?: string | null
           id?: string
           storage_path?: string | null
+          certificate_type?: string | null
         }
         Relationships: [
           {
@@ -131,6 +137,53 @@ export type Database = {
           start_date?: string
         }
         Relationships: []
+      }
+      virtual_certificate_responses: {
+        Row: {
+          created_at: string
+          document: string
+          event_id: string
+          id: string
+          question: string
+          recommendation: string
+          reflection: string
+          submitted_at: string
+          submitted_email: string
+          submitted_name: string
+        }
+        Insert: {
+          created_at?: string
+          document: string
+          event_id: string
+          id?: string
+          question: string
+          recommendation: string
+          reflection: string
+          submitted_at?: string
+          submitted_email: string
+          submitted_name: string
+        }
+        Update: {
+          created_at?: string
+          document?: string
+          event_id?: string
+          id?: string
+          question?: string
+          recommendation?: string
+          reflection?: string
+          submitted_at?: string
+          submitted_email?: string
+          submitted_name?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "virtual_certificate_responses_event_id_fkey"
+            columns: ["event_id"]
+            isOneToOne: false
+            referencedRelation: "Events"
+            referencedColumns: ["id"]
+          },
+        ]
       }
       registrations: {
         Row: {

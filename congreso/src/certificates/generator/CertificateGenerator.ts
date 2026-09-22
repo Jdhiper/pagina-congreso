@@ -1,8 +1,4 @@
-import {
-  PDFDocument,
-  StandardFonts,
-  rgb,
-} from "pdf-lib";
+import { PDFDocument, StandardFonts, rgb } from "pdf-lib";
 
 import { CertificateData } from "../types/certificate";
 import { loadTemplate } from "../pdf/loadTemplate";
@@ -28,38 +24,30 @@ export class CertificateGenerator {
     // Nombre
     // ============================
 
-    const nameSize = 28;
+    const maxNameSize = 24;
+    const minNameSize = 15;
+    const maxNameWidth = 480;
+    let nameSize = maxNameSize;
 
+    while (
+      nameSize > minNameSize &&
+      font.widthOfTextAtSize(data.fullName, nameSize) > maxNameWidth
+    ) {
+      nameSize -= 1;
+    }
+
+    const nameX = getCenteredX(
+      data.fullName,
+      font,
+      nameSize,
+      page.getWidth() / 2 - 22
+    );
     page.drawText(data.fullName, {
-      x: getCenteredX(
-        data.fullName,
-        font,
-        nameSize,
-        422
-      ),
-      y: 287,
+      x: nameX,
+      y: 322,
       size: nameSize,
       font,
-      color: rgb(0, 0, 0),
-    });
-
-    // ============================
-    // Documento
-    // ============================
-
-    const documentSize = 18;
-
-    page.drawText(data.document, {
-      x: getCenteredX(
-        data.document,
-        font,
-        documentSize,
-        422
-      ),
-      y: 180,
-      size: documentSize,
-      font,
-      color: rgb(0, 0, 0),
+      color: rgb(1, 1, 1),
     });
 
     const pdfBytes = await pdfDoc.save();

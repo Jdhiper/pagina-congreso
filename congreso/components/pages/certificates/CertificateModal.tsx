@@ -7,14 +7,11 @@ import {
   AlertCircle,
   Loader2,
   Download,
-  FilePlus2,
 } from "lucide-react";
 
 export type CertificateStatus =
   | "loading"
   | "not_found"
-  | "generate"
-  | "generating"
   | "ready"
   | "error";
 
@@ -23,7 +20,6 @@ interface CertificateModalProps {
   status: CertificateStatus;
   message?: string;
   onClose: () => void;
-  onGenerate: () => void;
   onDownload: () => void;
 }
 
@@ -32,7 +28,6 @@ export default function CertificateModal({
   status,
   message,
   onClose,
-  onGenerate,
   onDownload,
 }: CertificateModalProps) {
   return (
@@ -79,47 +74,6 @@ export default function CertificateModal({
           </>
         )}
 
-        {/* Puede generar */}
-        {status === "generate" && (
-          <>
-            <FilePlus2 className="mx-auto h-16 w-16 text-[#AF8428]" />
-
-            <h2 className="mt-6 text-2xl font-playfair font-semibold text-[#1B2126]">
-              Asistencia encontrada
-            </h2>
-
-            <p className="mt-3 text-[#222931]/70">
-              Tu certificado aún no ha sido generado.
-            </p>
-
-            <Button
-              className="mt-8"
-              onClick={onGenerate}
-            >
-              Generar certificado
-            </Button>
-          </>
-        )}
-
-        {/* Generando */}
-        {status === "generating" && (
-          <>
-            <Loader2 className="mx-auto h-16 w-16 animate-spin text-[#AF8428]" />
-
-            <h2 className="mt-6 text-2xl font-playfair font-semibold text-[#1B2126]">
-              Generando certificado
-            </h2>
-
-            <p className="mt-3 text-[#222931]/70">
-              Este proceso puede tardar unos segundos.
-            </p>
-
-            <div className="mt-8 h-2 overflow-hidden rounded-full bg-gray-200">
-              <div className="h-full w-full animate-pulse rounded-full bg-[#AF8428]" />
-            </div>
-          </>
-        )}
-
         {/* Error */}
         {status === "error" && (
           <>
@@ -140,12 +94,6 @@ export default function CertificateModal({
                 onClick={onClose}
               >
                 Cerrar
-              </Button>
-
-              <Button
-                onClick={onGenerate}
-              >
-                Intentar nuevamente
               </Button>
 
             </div>

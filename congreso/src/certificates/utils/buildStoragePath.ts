@@ -1,11 +1,15 @@
 import type { CertificateType } from "../types/certificate";
+import { normalizeDocument } from "./normalizeDocument";
 
 export function buildStoragePath(
   eventId: string,
   document: string,
-  type: CertificateType
+  type: CertificateType,
+  revision?: string
 ): string {
-  const cleanDocument = document.replace(/\D/g, "");
+  const cleanDocument = normalizeDocument(document);
+  const cleanRevision = revision?.replace(/[^a-zA-Z0-9_-]/g, "");
+  const suffix = cleanRevision ? `-${cleanRevision}` : "";
 
-  return `${eventId}/${type}/${cleanDocument}.pdf`;
+  return `${eventId}/${type}/${cleanDocument}${suffix}.pdf`;
 }
